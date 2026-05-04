@@ -26,11 +26,11 @@ const boton = document.getElementById("btn");
 const mensaje = document.getElementById("mensaje");
 
 boton.addEventListener("click", function () {
-    const value = input.value;
-    const number = Number(value);
-    const addition = number + 10;
+    const valor = input.value;
+    const numero = Number(valor);
+    const suma = numero + 10;
 
-    mensaje.textContent = addition;
+    mensaje.textContent = suma;
 });
 
 // ejercicio 4 //
@@ -57,16 +57,16 @@ if (vida <= 0) {
 let opcion = "iniciar";
 
 switch (opcion) {
-case "start":
+case "iniciar":
     console.log("¡Juego iniciado!");
     break;
-case "settings":
-    console.log("Settings Menu");
+case "ajustes":
+    console.log("Menu de Ajustes");
     break;
-case "credits":
-    console.log("GameCredits");
+case "creditos":
+    console.log("Creditos del juego");
     break;
-case "exit":
+case "salir":
     console.log("Saliendo del juego...");
     break;
 }
@@ -81,11 +81,67 @@ console.log("¡Comienza!");
 
 // ejercicio 8 //
 
-const pointsperround = [15, 25, 10, 30, 20];
-let totalpoints = 0;
+const puntosporronda = [15, 25, 10, 30, 20];
+let puntajetotal = 0;
 
-for (let points of pointsperround) {
-  totalpoints += points;
+for (let puntos of puntosporronda) {
+  puntajetotal += puntos;
 }
 
-console.log("La puntuación total es: " + totalpoints);
+console.log("La puntuación total es: " + puntajetotal);
+
+// ejercicio 9 //
+
+const inventario1 = ["espada", "poción", "llave", "escudo", "mapa"];
+console.log("El primer objeto del inventario es: " + inventario1[0]);
+console.log("El último objeto del inventario es: " + inventario1[4]);
+console.log("Cantidad de objetos en el inventario: " + inventario1.length);
+
+// ejercicio 10 //
+
+const inventario2 = ["espada", "poción", "llave", "escudo"];
+for (let i=0; i<inventario2.length; i++) {
+    console.log("El objeto en la posición " + i+1 + " es: " + inventario2[i]);
+}
+
+// ejercicio 11 //
+
+let mochila = [];
+mochila.push("Linterna")
+mochila.push("Comida");
+mochila.push("Mapa");
+
+mochila.pop();
+
+console.log(mochila);
+
+// ejercicio 12 //
+
+let inventario3 = ["espada", "poción", "llave"];
+if (inventario3.includes("llave")) {
+    console.log("Has utilizado la llave para abrir la puerta.");
+} else {
+    console.log("Necesitas una llave para abrir esta puerta.");
+}
+
+// ejercicio 13 //
+
+function saludarusuario(nombre) {
+    console.log("¡Hola, " + nombre + "! Bienvenido al juego.");
+}
+
+saludarusuario("F4cuu");
+
+// ejercicio 14 //
+
+function calcularvidarestante (vida, danio) {
+    return vida - danio;
+}   
+
+let resultado = calcularvidarestante(100, 30);
+
+console.log("Vida restante: " + resultado);
+
+// ejercicio 15 //
+
+
