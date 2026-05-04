@@ -209,3 +209,68 @@ const nombres = personajes.map((personaje) => {
 });
 
 console.log("Nombres de los personajes:" + nombres);
+
+// ejercicio 21 //
+
+const personajeEncontrado = personajes.find((personaje) => {
+    return personaje.nombre === "Kai";
+});
+
+console.log(personajeEncontrado);
+
+// ejercicio 22 //
+
+const vidaTotal = personajes.reduce((acumulador, personaje) => {
+ return acumulador + personaje.vida;
+}, 0);
+
+console.log("Vida total de los personajes: " + vidaTotal);
+
+// ejercicio 23 //
+
+const mensaje = document.getElementById("mensaje");
+
+mensaje.textContent = "Bienvenido a la guía de JavaScript";
+mensaje.style.color = "blue";
+
+// ejercicio 24 //
+
+const boton1 = document.getElementById("btn");
+const mensaje1 = document.getElementById("mensaje");
+
+let puntos = 0;
+
+boton1.addEventListener("click", function () {
+    puntos += 10;
+    mensaje1.textContent = "Puntos: " + puntos;
+});
+
+// ejercicio 25 //
+
+const input1 = document.getElementById("dato");
+const boton2 = document.getElementById("btn");
+const mensaje2 = document.getElementById("mensaje");
+
+boton2.addEventListener("click", function () {
+    if (input1.value === "") 
+        mensaje2.textContent = "Ingrese su nombre para comenzar el juego.";
+        else {
+            mensaje2.textContent = "¡Hola, " + input1.value + "! Bienvenido al juego.";
+        } 
+    
+});
+
+// ejercicio 26 //
+
+const jugador = {
+ nombre: "Luna",
+ puntaje: 1500
+};
+
+localStorage.setItem("jugador", JSON.stringify(jugador));
+
+const loadedPlayer = JSON.parse(localStorage.getItem("jugador"));
+
+console.log("Jugador cargado desde localStorage:");
+console.log("Nombre: " + loadedPlayer.nombre);
+console.log("Puntaje: " + loadedPlayer.puntaje);
