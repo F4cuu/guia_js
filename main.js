@@ -144,4 +144,68 @@ console.log("Vida restante: " + resultado);
 
 // ejercicio 15 //
 
+const sumar = (a, b) => {
+    return a + b;
+};
 
+console.log("La suma de 5 y 10 es: " + sumar(5, 10));
+
+// ejercicio 16 //
+
+const jugador = {
+ nombre: "Luna",
+ vida: 100,
+ energia: 80,
+ nivel: 1,
+ inventario: ["espada", "poción"]
+};
+
+console.log("Nombre del jugador: " + jugador.nombre);
+console.log("Vida del jugador: " + jugador.vida);
+console.log("Energía del jugador: " + jugador.energia);
+console.log("Nivel del jugador: " + jugador.nivel);
+console.log("Inventario del jugador: " + jugador.inventario.join(", "));
+
+// ejercicio 17 //
+
+const jugador2 = {
+ nombre: "Kai",
+ nivel: 1,
+ monedas: 0
+};
+
+function subedenivel(jugador2) {
+    jugador2.nivel += 1;
+    jugador2.monedas += 50;
+}
+
+subedenivel(jugador2);
+console.log("Nivel del jugador: " + jugador2.nivel);
+console.log("Monedas del jugador: " + jugador2.monedas);
+
+// ejercicio 18 //
+
+const personajes = [
+ { nombre: "Luna", vida: 100, tipo: "maga", nivel: 3 },
+ { nombre: "Kai", vida: 120, tipo: "guerrero", nivel: 4 },
+ { nombre: "Nina", vida: 90, tipo: "arquera", nivel: 2 }
+];
+console.log("Personajes:");
+for (let personaje of personajes) {
+    console.log("Nombre: " + personaje.nombre + ", Vida: " + personaje.vida + ", Tipo: " + personaje.tipo + ", Nivel: " + personaje.nivel);
+}
+
+// ejercicio 19 //
+
+const personajesFuertes = personajes.filter((jugadores) => {
+    return jugadores.nivel >= 3;
+});
+console.log(personajesFuertes);
+
+// ejercicio 20 //
+
+const nombres = personajes.map((personaje) => {
+    return personaje.nombre;
+});
+
+console.log("Nombres de los personajes:" + nombres);
